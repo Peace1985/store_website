@@ -1,0 +1,48 @@
+.header{
+    background-image:linear-gradient(rgba(#100C0E,.4),rgba(#100C0E,.4)), url(../img/hero-2.jpg);
+    background-size: cover;
+    height:100vh;
+    background-position: left 0px;
+    position: relative;
+    box-shadow: 0 1rem 4rem rgba($color-black,.4);
+    @include respond(phone){
+        background-position: left -77px top 0;
+    }
+    @include respond(phone-sm){
+        background-position: left -77px top 0;
+    }
+    &__logo-box{
+        width: 100%;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @include respond(tab-land){
+            top: 55%;
+        }
+        
+    }
+    &__logo{
+        display: block;
+        margin: 0 auto;        
+        height: 30rem;
+        
+        @include text-select-color;
+        @include respond(tab-port){
+            height: 30rem;
+        }
+        @include respond(phone){
+            height: 21rem;
+        }
+        @include respond(phone-sm){
+            height: 19rem;
+        }
+    }
+    &__text-box{
+        display: none;
+        margin: 0 auto;
+        width: 30%;
+        background-color: rgba($color-black, .8);
+    }
+
+}

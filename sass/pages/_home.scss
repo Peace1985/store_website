@@ -1,0 +1,43 @@
+.section-about{
+    background-image: linear-gradient(
+        rgba(#131213,.2),
+        rgba(#131213,.2)),
+        url(../img/about.jpg);
+    background-size: cover;
+    padding: 10rem 0;
+    
+}
+
+.about-text{
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    
+    background-color: rgba(#131213,.95);
+}
+
+.section-services{
+    background-color: #221F20;
+    display: block;
+    padding: 5rem 0 20rem 0;
+    box-shadow: 0 1rem 4rem rgba($color-black, .4);
+}
+.section-heading{
+    display: block;
+    margin: 0 auto;
+}
+
+.section-contact{
+    background-color: #3C3639;
+    padding: 5rem 0 5rem 0;
+}
+
+.contact-details{
+
+    ul{
+        list-style: none;
+        li{
+            display: block;
+            
+        }
+    }
+}

@@ -1,0 +1,200 @@
+.nav{
+   
+    @include clearfix;
+    transition: all .5s;
+    ul{
+        @include text-select-color;
+        float: right;
+        margin-right: 5rem;
+        @include respond(tab-land){
+            margin-right: 1rem;
+        }
+        @include respond(big-desktop){
+            margin-right: 7rem;
+        }
+
+        li{
+            list-style:none;
+            display: inline-block;
+            margin-top: 7rem;
+            margin-right: 5rem;
+            padding-bottom: 5rem;
+           @include respond(tab-land){
+                padding-top: 2rem;
+                margin-right: 5rem;
+           }
+        }
+    }
+    &__link{
+        @include text-select-color;
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: $color-white;
+            font-weight: 700;
+            font-size: 1.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all .2s;
+            border-bottom: 2px solid transparent;
+            display: inline-block;
+            
+
+        }
+        
+        &:hover {
+            color: rgba(255, 255, 255, 0.58);
+            // border-bottom: 2px solid $color-white;
+            // font-size: 2.5rem;
+        }
+
+        &--footer{
+            &:link,
+            &:visited{
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+        }
+
+        &--social{
+            &-fb{
+                &:hover{
+                    color: #0f80f5;
+                }
+            }
+            &-insta{
+                &:hover{
+                    color: #ce2971;
+                }
+            }
+            
+        }
+    }
+
+    @include respond(tab-port){
+        display: none;
+        visibility: hidden;
+    }
+  
+}
+.sidenav{
+    display: none;
+    visibility: hidden;
+    &__checkbox {
+        display: none;
+    }
+    &__button {
+        background-color: transparent;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        border-radius: 10px;
+        z-index: 2000;
+        // box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+        }
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
+        @include respond(phone-sm){
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+    &__nav {
+        height: 100vh;
+        width: 0px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+        background-color: rgba(17, 17, 17,.95);
+        padding-top: 20rem;
+        overflow-x: hidden;
+        opacity: 0;
+        
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &-list{
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            z-index: 200;
+            padding: 5px;
+        }
+    }
+
+    &__item{
+        display: block;
+        padding: 1rem 5rem;
+        letter-spacing: 1px; 
+        
+    }
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { top: -1rem; }
+        &::after { top: 1rem; }
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+    @include respond(tab-port){
+        visibility: visible;
+        display: initial;
+    }
+
+    &__checkbox:checked ~ &__nav {
+        width: 250px;
+        opacity: 1;
+    }
+
+    &__link:link,
+    &__link:visited{
+        
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    &__link:hover{
+        color: #f1f1f1;
+    }
+}

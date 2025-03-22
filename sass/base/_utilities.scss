@@ -1,0 +1,17 @@
+.u-margin-bottom-small{ margin-bottom: 2rem;}
+.u-margin-bottom-medium{ margin-bottom: 5rem;}
+.u-margin-bottom-big{ margin-bottom: 8rem;
+@include respond(phone){
+    margin-bottom: 5rem;
+}
+}
+.u-margin-bottom-large{ margin-bottom: 10rem;}
+
+.u-margin-left-small{ margin-left: 5rem;}
+
+.u-center-text { text-align: center;}
+.u-margin-right-small{ margin-right: 5rem;}
+.zoom-in{
+    animation: ZoomIn 1s ease-out .5s;
+    animation-fill-mode: backwards;
+}

@@ -1,0 +1,23 @@
+@keyframes MoveInBottom{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes ZoomIn{
+  0% { 
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,97 @@
+.card{
+    position: relative;
+    height: 50rem;
+    border-radius: 2px;
+    background-position: center;
+    box-shadow: 0 1rem 4rem rgba($color: #000, $alpha: .5);
+
+    @include respond(tab-port){
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+
+        .heading{
+            padding-top: 20rem;
+        }
+    
+        .card{
+            transform: scale(2);
+
+            &__heading{
+                margin: 2rem 0 5rem 0;
+                font-weight: 700;
+            }
+            &__details{
+                display: block;
+                visibility: visible;
+                animation: MoveInBottom .2s ease;
+            }
+        }
+    }
+    &--1{
+        background-image: linear-gradient(rgba(#221F20,.5),rgba(#221F20,.5)), url(../img/premium.jpg);
+        background-size: cover;
+    }
+    &--2{
+        background-image: linear-gradient(rgba(#221F20,.5),rgba(#221F20,.5)), url(../img/rentals.jpg);
+        background-size: cover;
+    }
+    &--3{
+        background-image: linear-gradient(rgba(#221F20,.5),rgba(#221F20,.5)), url(../img/repairs.jpg);
+        background-size: cover;
+    }
+    &--4{
+        background-image: linear-gradient(rgba(#221F20,.5),rgba(#221F20,.5)), url(../img/delivery.jpg);
+        background-size: cover;
+    }
+    &__heading{
+        border-top: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        bottom: 20%;
+        text-align: center;
+        @include text-select-color;
+        transition: all .3s ease;
+        &--1{
+            margin: -1rem 0;
+        }
+    }
+
+    &__details{
+        transition: all .5s;
+        visibility: hidden;
+        display: none;
+        
+        margin: 2rem;
+        text-align: center;
+        @include text-select-color;
+    }
+
+   
+    &:hover{
+        .heading{
+            padding-top: 20rem;
+        }
+    
+        .card{
+            transform: scale(2);
+
+            &__heading{
+                margin: 2rem 0 5rem 0;
+                font-weight: 700;
+            }
+            &__details{
+                display: block;
+                visibility: visible;
+                animation: MoveInBottom .2s ease;
+            }
+        }
+    }
+}
+
+.heading{
+    padding-top: 36rem; 
+    transition: all .3s ease ;
+}
